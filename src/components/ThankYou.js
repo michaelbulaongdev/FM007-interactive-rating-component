@@ -5,13 +5,15 @@ export default function ThankYou(props) {
 	return (
 		<div>
 			<div>
-				<ThankYouLogo />
-			</div>
-			<div className='selection'>
-				<p>You selected {props.rating} out of 5</p>
-			</div>
-			<div>
-				<h1>Thank you!</h1>
+				<div>
+					<ThankYouLogo />
+				</div>
+				<div className='selection'>
+					<p className='selection-text'>You selected {props.rating} out of 5</p>
+				</div>
+				<div>
+					<h1>Thank you!</h1>
+				</div>
 			</div>
 			<div>
 				<p>

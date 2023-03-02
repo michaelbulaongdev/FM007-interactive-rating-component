@@ -1,5 +1,6 @@
 import './App.css';
 import {useState} from 'react';
+import {Container} from '@mui/material';
 import ThankYou from './components/ThankYou';
 import Attribution from './components/Attribution';
 
@@ -16,7 +17,12 @@ export default function App() {
 	};
 
 	return (
-		<div className='app'>
+		<Container
+			maxWidth='sm'
+			sx={{
+				textAlign: 'center',
+				alignContent: 'stretch',
+			}}>
 			{submitted ? (
 				<div className='card-container'>
 					<ThankYou rating={rating} />
@@ -27,6 +33,6 @@ export default function App() {
 				</div>
 			)}
 			<Attribution />
-		</div>
+		</Container>
 	);
 }

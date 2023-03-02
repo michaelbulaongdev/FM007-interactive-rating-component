@@ -4,8 +4,8 @@
   --orange: hsl(25, 97%, 53%);
   --white: hsl(0, 0%, 100%);
   --lightGrey: hsl(217, 12%, 63%);
-  --mediumGrey: hsl(216, 12%, 54%);
-  --darkBlue: hsl(213, 19%, 18%);
+  --mediumGrey: hsl(216, 12%, 30%);
+  --darkBlue: hsl(213, 19%, 13%);
   --verydarkBlue: hsl(216, 12%, 8%);
 }
 
@@ -27,25 +27,35 @@ a {
   color: var(--orange);
 }
 
-.app {
-  display: flex;
-}
-
 .card-container {
-  margin: auto;
-  min-width: 330px;
-  max-height: 360px;
+  margin: 10% auto;
+  max-width: 340px;
+  min-height: 340px;
   background-color: var(--darkBlue);
+  border-radius: 20px;
+  padding: 10%;
+  flex-wrap: wrap;
+  display: flex;
+  align-content: stretch;
 }
 
 .selection {
   color: var(--orange);
   background-color: var(--mediumGrey);
-  border-radius: 5px;
+  border-radius: 20px;
+  height: 2rem;
+  min-width: 50%;
+  margin: 10% 23%;
+  display: flex;
+  justify-content: center;
+}
+
+.selection-text {
+  margin: 0;
+  padding: 8px;
 }
 
 .attribution { 
-    position: fixed; 
     bottom:0%;
     width:100%; 
 }

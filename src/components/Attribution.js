@@ -8,7 +8,6 @@ export default function Attribution() {
 				<a href='https://michaelbulaongdev.github.io/portfolio'>
 					Michael Bulaong
 				</a>
-				.
 			</p>
 		</div>
 	);
