@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,700&display=swap');
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --verydarkBlue: hsl(216, 12%, 8%);
+}
+
+body {
+  background-color: var(--verydarkBlue);
+  font-family: 'Overpass', sans-serif;
+  color: var(--lightGrey);
+}
+
+h1 {
+  color: var(--white);
+}
+
+p {
+  font-size: 15px;
+}
+
+a {
+  color: var(--orange);
+}
+
+.app {
+  display: flex;
+}
+
+.card-container {
+  margin: auto;
+  min-width: 330px;
+  max-height: 360px;
+  background-color: var(--darkBlue);
+}
+
+.selection {
+  color: var(--orange);
+  background-color: var(--mediumGrey);
+  border-radius: 5px;
+}
+
+.attribution { 
+    position: fixed; 
+    bottom:0%;
+    width:100%; 
+}
