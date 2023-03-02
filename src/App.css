@@ -4,7 +4,7 @@
   --orange: hsl(25, 97%, 53%);
   --white: hsl(0, 0%, 100%);
   --lightGrey: hsl(217, 12%, 63%);
-  --mediumGrey: hsl(216, 12%, 30%);
+  --mediumGrey: hsl(216, 12%, 25%);
   --darkBlue: hsl(213, 19%, 13%);
   --verydarkBlue: hsl(216, 12%, 8%);
 }
@@ -37,6 +37,10 @@ a {
   flex-wrap: wrap;
   display: flex;
   align-content: stretch;
+}
+
+.thankyou {
+  text-align: center;
 }
 
 .selection {
