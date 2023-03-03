@@ -20,6 +20,7 @@ button {
   cursor: pointer;
   border-style: none;
   text-align: center;
+  transition: 100ms;
 }
 
 h1 {
