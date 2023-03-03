@@ -1,11 +1,13 @@
-import {ReactComponent as StarLogo} from '../images/icon-star.svg';
 import {useState} from 'react';
+import {ReactComponent as StarLogo} from '../images/icon-star.svg';
 
 export default function Rating(props) {
 	const numberButtons = [1, 2, 3, 4, 5];
+	const [selectedButton, setSelectedButton] = useState(null);
 
-	const handleClick = (e) => {
-		props.setRating(e.target.value);
+	const handleClick = (num) => {
+		props.setRating(num);
+		setSelectedButton(num);
 	};
 
 	return (
@@ -21,10 +23,19 @@ export default function Rating(props) {
 				</p>
 			</div>
 			<div className='numbers'>
-				{numberButtons.map((item) => {
+				{numberButtons.map((num) => {
 					return (
-						<button value={item} onClick={handleClick} className='number-btn'>
-							{item}
+						<button
+							key={num}
+							onClick={() => handleClick(num)}
+							className='number-btn'
+							style={{
+								backgroundColor:
+									selectedButton === num
+										? 'var(--orange)'
+										: 'var(--mediumGrey)',
+							}}>
+							{num}
 						</button>
 					);
 				})}

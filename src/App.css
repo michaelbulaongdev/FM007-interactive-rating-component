@@ -65,23 +65,17 @@ a {
   margin: 0 5px auto;
 }
 .number-btn {
+  background-color: var(--mediumGrey);
   color: var(--white);
   border-style: none;
   border-radius: 100%;
   padding: 15px 21px;
   margin: 15px 0;
+  width: 50px;
 }
 
 .number-btn:hover {
   background-color: var(--lightGrey);
-}
-
-.clicked {
-  background-color: var(--orange);
-}
-
-.unclicked {
-  background-color: var(--mediumGrey);
 }
 
 .submit-container {
@@ -105,7 +99,6 @@ a {
 
 .selection {
   color: var(--orange);
-  background-color: var(--mediumGrey);
   border-radius: 20px;
   height: 2rem;
   min-width: 50%;
