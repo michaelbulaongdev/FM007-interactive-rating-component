@@ -1,7 +1,12 @@
 import {ReactComponent as StarLogo} from '../images/icon-star.svg';
+import {useState} from 'react';
 
 export default function Rating(props) {
 	const numberButtons = [1, 2, 3, 4, 5];
+
+	const handleClick = (e) => {
+		props.setRating(e.target.value);
+	};
 
 	return (
 		<div>
@@ -16,10 +21,18 @@ export default function Rating(props) {
 				</p>
 			</div>
 			<div className='numbers'>
-				<button className='button'>1</button>
+				{numberButtons.map((item) => {
+					return (
+						<button value={item} onClick={handleClick} className='number-btn'>
+							{item}
+						</button>
+					);
+				})}
 			</div>
-			<div className='submit-button'>
-				<button onSubmit={props.handleSubmit}>Submit</button>
+			<div className='submit-container'>
+				<button className='submit-btn' onClick={props.handleSubmit}>
+					SUBMIT
+				</button>
 			</div>
 		</div>
 	);

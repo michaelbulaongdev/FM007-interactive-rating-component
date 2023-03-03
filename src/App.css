@@ -9,10 +9,17 @@
   --verydarkBlue: hsl(216, 12%, 8%);
 }
 
-body {
+body, button {
   background-color: var(--verydarkBlue);
   font-family: 'Overpass', sans-serif;
   color: var(--lightGrey);
+}
+
+button {
+  font-size: medium;
+  cursor: pointer;
+  border-style: none;
+  text-align: center;
 }
 
 h1 {
@@ -39,8 +46,61 @@ a {
   align-content: stretch;
 }
 
-.thankyou {
+.thank-you {
   text-align: center;
+}
+
+.star-circle {
+  background-color: var(--mediumGrey);
+  padding: 13px;
+  margin-bottom: 10px;
+  border-radius: 100%;
+  display: inline-flex;
+  align-content: center;
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5px auto;
+}
+.number-btn {
+  color: var(--white);
+  border-style: none;
+  border-radius: 100%;
+  padding: 15px 21px;
+  margin: 15px 0;
+}
+
+.number-btn:hover {
+  background-color: var(--lightGrey);
+}
+
+.clicked {
+  background-color: var(--orange);
+}
+
+.unclicked {
+  background-color: var(--mediumGrey);
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-btn {
+  height: 40px;
+  width: 100%;
+  color: var(--white);
+  background-color: var(--orange);
+  border-radius: 20px;
+  margin: 20px 0 auto;
+}
+
+.submit-btn:hover {
+  background-color: var(--white);
+  color: var(--orange);
 }
 
 .selection {

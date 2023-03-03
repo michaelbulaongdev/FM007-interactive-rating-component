@@ -9,12 +9,8 @@ export default function App() {
 	const [submitted, setSubmitted] = useState(false);
 	const [rating, setRating] = useState('0');
 
-	const handleClick = (e) => {
-		setRating(e.target.value);
-	};
-
 	const handleSubmit = () => {
-		setSubmitted(true);
+		rating !== '0' ? setSubmitted(true) : setSubmitted(false);
 	};
 
 	return (
@@ -24,12 +20,12 @@ export default function App() {
 				alignContent: 'stretch',
 			}}>
 			{submitted ? (
-				<div className='thankyou card-container'>
+				<div className='card-container thank-you'>
 					<ThankYou rating={rating} />
 				</div>
 			) : (
 				<div className='card-container'>
-					<Rating handleClick={handleClick} handleSubmit={handleSubmit} />
+					<Rating setRating={setRating} handleSubmit={handleSubmit} />
 				</div>
 			)}
 			{/* <Attribution /> */}
