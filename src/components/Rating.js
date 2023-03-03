@@ -2,8 +2,9 @@ import {useState} from 'react';
 import {ReactComponent as StarLogo} from '../images/icon-star.svg';
 
 export default function Rating(props) {
-	const numberButtons = [1, 2, 3, 4, 5];
 	const [selectedButton, setSelectedButton] = useState(null);
+
+	const numberButtons = [1, 2, 3, 4, 5];
 
 	const handleClick = (num) => {
 		props.setRating(num);
@@ -31,9 +32,7 @@ export default function Rating(props) {
 							className='number-btn'
 							style={{
 								backgroundColor:
-									selectedButton === num
-										? 'var(--orange)'
-										: 'var(--mediumGrey)',
+									selectedButton === num ? 'var(--orange)' : null,
 							}}>
 							{num}
 						</button>
