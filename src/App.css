@@ -9,10 +9,14 @@
   --verydarkBlue: hsl(216, 12%, 8%);
 }
 
-body, button {
+body {
   background-color: var(--verydarkBlue);
   font-family: 'Overpass', sans-serif;
   color: var(--lightGrey);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 0;
 }
 
 button {
@@ -37,7 +41,8 @@ a {
 
 .card-container {
   margin: 10% auto;
-  max-width: 340px;
+  min-width: 320px;
+  max-width: 450px;
   min-height: 340px;
   background-color: var(--darkBlue);
   border-radius: 20px;
